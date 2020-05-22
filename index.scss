@@ -1,0 +1,789 @@
+$outline-thickness: 1.5px;
+$outline-color: #060606;
+$pupil-and-nose-color: #010101;
+$happy-color: #44a7c6;
+$background: #0e0e0e;
+$light-pink: #f7989e;
+$dark-pink: #de7783;
+$belly-shadow: #bdcede;
+$head-shadow: #1f89c8;
+$beauty: #3f48cc;
+$pads: #c85171;
+
+body, html {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	background-color: $background;
+}
+
+.container {
+	// display: flex;
+	// align-items: center;
+	// justify-content: center;
+	height: 100%;
+	display: grid;
+	place-items: center;
+	  .happy {
+	  // align-self: center;
+		// & * {
+		// 	background-color: $happy-color; 
+		// }
+		position: relative;
+		.head {
+			border: solid $outline-thickness $outline-color;
+			z-index: 1;
+			position: relative;
+			height: 461px;
+			width: 435px;
+			border-radius: 741px 489px 449px 506px / 308px 526px 398px 333px;
+			background-color: $head-shadow;
+			overflow: hidden;
+
+			.head-shadow {
+				position: absolute;
+				height: 1000px;
+				width: 1000px;
+				left: -521px;
+				top: -541px;
+				border-radius: 48% 111% 39% 50% / 50% 50% 35% 50%;
+				// border-bottom-right-radius: 10%;
+				background-color: $happy-color;
+			}
+		}
+
+		.left-ear {
+			z-index: 1;
+			position: absolute;
+			top: 150px;
+			left: 50px;
+			transform: rotate(-45deg);
+			// background-color: red;
+
+			.left-part {
+				width: 0;
+				height: 0;
+				position: absolute;
+				left: -104px;
+				top: -150px;
+				border-left: 150px solid transparent;
+				border-right: 150px solid transparent;
+				border-bottom-left-radius: 50%;
+				border-bottom-right-radius: 50%;
+				border-bottom: 100px solid $happy-color;
+				transform: rotate(126deg);
+				background-color: transparent;
+			}
+				
+			.right-part {
+				width: 0;
+				height: 0;
+				position: absolute;
+				left: -55px;
+				top: -142px;
+				border-left: 150px solid transparent;
+				border-right: 150px solid transparent;
+				border-bottom-left-radius: 50%;
+				border-bottom-right-radius: 50%;
+				border-bottom: 100px solid $happy-color;
+				transform: rotate(75deg) scale(1, -1);
+				background-color: transparent;
+			}
+
+			.inner-left-ear {
+				.inner1 {
+					width: 0;
+					height: 0;
+					position: absolute;
+					left: -34px;
+					top: -160px;
+					border-left: 80px solid transparent;
+					border-right: 80px solid transparent;
+					border-bottom-left-radius: 50%;
+					border-bottom-right-radius: 50%;
+					// border-bottom-right-radius: 50%;
+					border-bottom: 80px solid red;
+					transform: rotate(124deg);
+					background-color: transparent;
+				}
+				.inner2 {
+					width: 0;
+					height: 0;
+					position: absolute;
+					left: -24px;
+					top: -160px;
+					border-left: 80px solid transparent;
+					border-right: 80px solid transparent;
+					border-bottom-left-radius: 50%;
+					border-bottom-right-radius: 50%;
+					// border-bottom-right-radius: 50%;
+					border-bottom: 60px solid blue;
+					transform: rotate(-80deg);
+					background-color: transparent;
+				}
+				.inner3 {
+					width: 0;
+					height: 0;
+					position: absolute;
+					left: -34px;
+					top: -120px;
+					border-left: 60px solid transparent;
+					border-right: 60px solid transparent;
+					border-bottom-left-radius: 50%;
+					border-bottom-right-radius: 50%;
+					// border-bottom-right-radius: 50%;
+					border-bottom: 60px solid yellow;
+					transform: rotate(-10deg);
+					background-color: transparent;
+				}
+			}
+		}
+		.right-ear {
+			z-index: 1;
+
+			position: absolute;
+			top: -100px;
+			left: 50px;
+			transform: rotate(30deg);
+			// background-color: red;
+
+			.left-part {
+				width: 0;
+				height: 0;
+				position: absolute;
+				left: 215px;
+				top: -120px;
+				border-left: 150px solid transparent;
+				border-right: 150px solid transparent;
+				border-bottom-left-radius: 50%;
+				border-bottom-right-radius: 50%;
+				border-bottom: 100px solid $happy-color;
+				transform: rotate(116deg);
+				background-color: transparent;
+			}
+				
+			.right-part {
+				width: 0;
+				height: 0;
+				position: absolute;
+				left: 243px;
+				top: -117px;
+				border-left: 150px solid transparent;
+				border-right: 150px solid transparent;
+				border-bottom-left-radius: 50%;
+				border-bottom-right-radius: 50%;
+				border-bottom: 100px solid $happy-color;
+				transform: rotate(75deg) scale(1, -1);
+				background-color: transparent;
+			}
+		}
+
+		.eyebrow {
+			position: absolute;
+			z-index: 2;
+			&.right-eyebrow {
+				position: absolute;
+				top: 49px;
+				left: 240px;
+				width: 97px;
+				height: 135px;
+				background-color: $happy-color;
+				// background-color: transparent;
+				// background-color: red;
+				border: solid $outline-thickness $pupil-and-nose-color;
+				border-color: transparent transparent $pupil-and-nose-color transparent;
+				// border-radius: 0 0 240px 50%/60px;
+				border-radius: 0 100% 125% 85%;
+				// border-radius: 50%;
+				transform: rotate(200deg);
+
+				.beauty {
+					position: absolute;
+					background-color: $beauty;
+					top: 127px;
+					left: 77px;
+					height: 5px;
+					width: 5px;
+					border-radius: 50%;
+				}
+			}
+			&.left-eyebrow {
+				position: absolute;
+				top: 59px;
+				left: 99px;
+				width: 85px;
+				height: 135px;
+				background-color: $happy-color;
+				// background-color: transparent;
+				// background-color: red;
+				border: solid $outline-thickness $pupil-and-nose-color;
+				border-color: transparent transparent $pupil-and-nose-color transparent;
+				// border-radius: 0 0 240px 50%/60px;
+				// border-radius: 0 0 85% 85% / 85%;
+				border-radius: 0 111% 77% 90%;
+				transform: rotate(158deg);
+			}
+		}
+
+		.eyeball {
+			z-index: 4;
+			background-color: white;
+			border: $outline-thickness solid $outline-color;
+			.pupil {
+				background-color: $pupil-and-nose-color;
+				// border-radius: 100%;
+			}
+		}
+
+		.left-eyeball {
+			height: 185px;
+			width: 174px;
+			position: absolute;
+			top: 140px;
+			left: 21px;
+			border-radius: 425% 455% 467% 431% / 555% 462% 406% 333%;
+			
+			.left-pupil {
+				height: 87px;
+				width: 88px;
+				position: absolute;
+				top: 30px;
+				left: 47px;
+				border-radius: 56% 57% 55% 65% / 62% 57% 59% 54%;
+			}
+		}
+
+		.right-eyeball {
+			height: 188px;
+			width: 166px;
+			position: absolute;
+			top: 128px;
+			left: 251px;
+			border-radius: 462% 455% 467% 472% / 457% 581% 442% 423%;
+			
+			.right-pupil {
+				height: 85px;
+				width: 85px;
+				position: absolute;
+				top: 29px;
+				left: 36px;
+				border-radius: 66% 57% 55% 65% / 72% 68% 51% 54%;
+			}
+		}
+
+		.nose {
+			z-index: 3;
+			position: absolute;
+			border-top: 19px solid $pupil-and-nose-color;
+			border-left: 18px solid transparent;
+			border-right: 18px solid transparent;
+			border-radius: 50%;
+			transform: rotate(4deg);
+			// height: 21px;
+			// width: 33px;
+			height: 0;
+			width: 0;
+			top: 297px;
+			left: 208px;
+			// border-top: 
+			// background-color: $pupil-and-nose-color;
+		}
+
+		.philtrum {
+			z-index: 3;
+			height: 15px;
+			width: $outline-thickness;
+			position: absolute;
+			top: 314px;
+			left: 225px;
+			background-color: $pupil-and-nose-color;
+			transform: rotate(-6deg);
+		}
+
+		.mustache {
+			position: absolute;
+			top: 327px;
+			left: 226px;
+			z-index: 2;
+
+		.right-mustache {
+			position: absolute;
+			top: -106px;
+			left: -13px;
+			width: 140px;
+			height: 135px;
+			background-color: $happy-color;
+			// background-color: transparent;
+			// background-color: red;
+			border: solid $outline-thickness $pupil-and-nose-color;
+			border-color: transparent transparent $pupil-and-nose-color transparent;
+			// border-radius: 0 0 240px 50%/60px;
+			// border-radius: 0 0 85% 85% / 85%;
+			border-radius: 50%;
+			transform: rotate(10deg);
+		}
+
+		.left-mustache {
+			position: absolute;
+			top: -106px;
+			left: -128px;
+			width: 140px;
+			height: 135px;
+			background-color: $happy-color;
+			// background-color: transparent;
+			// background-color: red;
+			border: solid $outline-thickness $pupil-and-nose-color;
+			border-color: transparent transparent $pupil-and-nose-color transparent;
+			// border-radius: 0 0 240px 50%/60px;
+			// border-radius: 0 0 85% 85% / 85%;
+			border-radius: 50%;
+			transform: rotate(-10deg);
+		}
+
+		}
+
+		.tongue {
+			z-index: 1;
+			position: absolute;
+			top: 262px;
+			left: 160px;
+			width: 128px;
+			height: 180px;
+			background-color: $dark-pink;
+			border: solid $outline-thickness $pupil-and-nose-color;
+			border-radius: 40% 40% 50% 50% / 50% 50% 50% 50%;
+			transform: rotate(-3deg);
+			overflow: hidden;
+
+			.tongue-shadow {
+				z-index: 1;
+				position: absolute;
+				width: 0;
+				height: 0;
+				top: 90px;
+				left: -186px;
+				border-left: 250px solid transparent;
+				border-right: 250px solid transparent;
+				border-bottom: 100px solid $light-pink;
+				background-color: transparent;
+				display:inline-block;
+			}
+		}
+
+		.body {
+				z-index: 0;
+				position: absolute;
+				top: 400px;
+				left: 100px;
+				width: 254px;
+				height: 226px;
+				background-color: $happy-color;
+				border: solid $outline-thickness $outline-color;
+				border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+				transform: rotate(-3deg);
+				overflow: hidden;
+			.belly {
+				z-index: 1;
+				position: absolute;
+				top: -10px;
+				left: 40px;
+				width: 169px;
+				height: 215px;
+				background-color: white;
+				border: solid $outline-thickness $outline-color;
+				border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+				transform: rotate(-3deg);
+				overflow: hidden;
+
+				.belly-shadow {
+					z-index: 2;
+					position: absolute;
+					top: -315px;
+					left: -60px;
+					width: 369px;
+					height: 415px;
+					background-color: $belly-shadow;
+					border-radius: 60% 67% 68% 63% / 60% 59% 67% 78%;
+					transform: rotate(25deg);
+				}
+			}
+		}
+
+		.left-arm {
+			z-index: 1;
+			position: absolute;
+			height: 130px;
+			width: 48px;
+			top: 370px;
+			left: 54px;
+			background-color: $happy-color;
+			border-top-left-radius: 80px;
+			border-top-right-radius: 60px;
+			border-top: solid $outline-thickness $outline-color;
+			border-left: solid $outline-thickness $outline-color;
+			border-right: solid $outline-thickness $outline-color;
+			border-bottom-color: transparent;
+			transform: rotate(-43deg);
+
+			.left-arm-pads {
+				position: absolute;
+				.p1 {
+					position: absolute;
+					top: 24px;
+					left: -1px;
+					background-color: $pads;
+					height: 10px;
+					width: 10px;
+					border: solid $outline-thickness $outline-color;
+					border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+				}
+				.p2 {
+					position: absolute;
+					top: 8px;
+					left: 5px;
+					background-color: $pads;
+					height: 10px;
+					width: 10px;
+					border: solid $outline-thickness $outline-color;
+					border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+				}
+				.p3 {
+					position: absolute;
+					top: 5px;
+					left: 20px;
+					background-color: $pads;
+					height: 10px;
+					width: 10px;
+					border: solid $outline-thickness $outline-color;
+					border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+				}
+				.p4 {
+					position: absolute;
+					top: 17px;
+					left: 30px;
+					background-color: $pads;
+					height: 10px;
+					width: 10px;
+					border: solid $outline-thickness $outline-color;
+					border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+				}
+				.p5 {
+					position: absolute;
+					top: 32px;
+					left: 31px;
+					background-color: $pads;
+					height: 10px;
+					width: 10px;
+					border: solid $outline-thickness $outline-color;
+					border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+				}
+				.p6 {
+					position: absolute;
+					top: 24px;
+					left: 11px;
+					background-color: $pads;
+					height: 30px;
+					width: 15px;
+					border: solid $outline-thickness $outline-color;
+					border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+				}
+			}
+		}
+
+		.right-arm {
+			z-index: 1;
+			position: absolute;
+			height: 140px;
+			width: 44px;
+			top: 350px;
+			left: 343px;
+			background-color: $happy-color;
+			border-top-left-radius: 80px;
+			border-top-right-radius: 60px;
+			border-top: solid $outline-thickness $outline-color;
+			border-left: solid $outline-thickness $outline-color;
+			border-right: solid $outline-thickness $outline-color;
+			border-bottom-color: transparent;
+			transform: rotate(35deg);
+
+			.right-arm-pads {
+				position: absolute;
+				.p1 {
+					position: absolute;
+					top: 24px;
+					left: -1px;
+					background-color: $pads;
+					height: 10px;
+					width: 10px;
+					border: solid $outline-thickness $outline-color;
+					border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+				}
+				.p2 {
+					position: absolute;
+					top: 8px;
+					left: 5px;
+					background-color: $pads;
+					height: 10px;
+					width: 10px;
+					border: solid $outline-thickness $outline-color;
+					border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+				}
+				.p3 {
+					position: absolute;
+					top: 5px;
+					left: 20px;
+					background-color: $pads;
+					height: 10px;
+					width: 10px;
+					border: solid $outline-thickness $outline-color;
+					border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+				}
+				.p4 {
+					position: absolute;
+					top: 17px;
+					left: 30px;
+					background-color: $pads;
+					height: 10px;
+					width: 10px;
+					border: solid $outline-thickness $outline-color;
+					border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+				}
+				.p5 {
+					position: absolute;
+					top: 32px;
+					left: 31px;
+					background-color: $pads;
+					height: 10px;
+					width: 10px;
+					border: solid $outline-thickness $outline-color;
+					border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+				}
+				.p6 {
+					position: absolute;
+					top: 24px;
+					left: 11px;
+					background-color: $pads;
+					height: 30px;
+					width: 15px;
+					border: solid $outline-thickness $outline-color;
+					border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+				}
+			}
+		}
+
+		.left-leg {
+			position: absolute;
+			height: 0;
+			width: 45px;
+			top: 568px;
+			left: 56px;
+			border-bottom: 100px solid $happy-color;
+			border-left: 15px solid transparent;
+			border-right: 15px solid transparent;
+			transform: rotate(-129deg);
+		}
+
+		.left-foot {
+			position: absolute;
+			top: 555px;
+			left: -4px;
+			width: 75px;
+			height: 121px;
+			background-color: $happy-color;
+			border: solid $outline-thickness $pupil-and-nose-color;
+			border-color: $pupil-and-nose-color $pupil-and-nose-color $pupil-and-nose-color $pupil-and-nose-color;
+			border-radius: 50% 43% 50% 50% / 43% 50% 50% 33%;
+			transform: rotate(-23deg);
+
+			.left-foot-outline-eraser {
+				position: absolute;
+				width: 70px;
+				height: 70px;
+				background-color: $happy-color;
+				border-radius: 50%;
+				top: 49px;
+				left: 9px;
+			}
+
+			.left-foot-pads {
+				z-index: 1;
+				position: absolute;
+				left: 15px;
+				.p1 {
+					position: absolute;
+					top: 24px;
+					left: -1px;
+					background-color: $pads;
+					height: 10px;
+					width: 10px;
+					border: solid $outline-thickness $outline-color;
+					border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+				}
+				.p2 {
+					position: absolute;
+					top: 8px;
+					left: 5px;
+					background-color: $pads;
+					height: 10px;
+					width: 10px;
+					border: solid $outline-thickness $outline-color;
+					border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+				}
+				.p3 {
+					position: absolute;
+					top: 5px;
+					left: 20px;
+					background-color: $pads;
+					height: 10px;
+					width: 10px;
+					border: solid $outline-thickness $outline-color;
+					border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+				}
+				.p4 {
+					position: absolute;
+					top: 17px;
+					left: 30px;
+					background-color: $pads;
+					height: 10px;
+					width: 10px;
+					border: solid $outline-thickness $outline-color;
+					border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+				}
+				.p5 {
+					position: absolute;
+					top: 32px;
+					left: 31px;
+					background-color: $pads;
+					height: 10px;
+					width: 10px;
+					border: solid $outline-thickness $outline-color;
+					border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+				}
+				.p6 {
+					position: absolute;
+					top: 24px;
+					left: 11px;
+					background-color: $pads;
+					height: 30px;
+					width: 15px;
+					border: solid $outline-thickness $outline-color;
+					border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+				}
+			}
+			}
+		}
+	}
+
+		.right-leg {
+			position: absolute;
+			height: 0;
+			width: 75px;
+			top: 558px;
+			left: 305px;
+			border-bottom: 45px solid $happy-color;
+			border-left: 8px solid transparent;
+			border-right: 8px solid transparent;
+			transform: rotate(123deg);
+		}
+
+		.right-ankle {
+			position: absolute;
+			height: 0;
+			width: 75px;
+			top: 568px;
+			left: 315px;
+			border-bottom: 45px solid $happy-color;
+			border-left: 8px solid transparent;
+			border-right: 8px solid transparent;
+			transform: rotate(-63deg);
+		}
+
+		.right-foot {
+			position: absolute;
+			top: 545px;
+			left: 366px;
+			width: 68px;
+			height: 114px;
+			background-color: $happy-color;
+			border: solid $outline-thickness $pupil-and-nose-color;
+			border-color: $pupil-and-nose-color $pupil-and-nose-color $pupil-and-nose-color $pupil-and-nose-color;
+			border-radius: 50% 43% 50% 50% / 43% 50% 50% 33%;
+			transform: rotate(33deg);
+			// overflow: hidden;
+
+			.right-foot-outline-eraser {
+				position: absolute;
+				width: 80px;
+				height: 80px;
+				background-color: $happy-color;
+				border-radius: 50%;
+				top: 31px;
+				left: -17px;
+			}
+
+			.right-foot-pads {
+				position: absolute;
+				z-index: 1;
+				left: 12px;
+				.p1 {
+					position: absolute;
+					top: 24px;
+					left: -1px;
+					background-color: $pads;
+					height: 10px;
+					width: 10px;
+					border: solid $outline-thickness $outline-color;
+					border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+				}
+				.p2 {
+					position: absolute;
+					top: 8px;
+					left: 5px;
+					background-color: $pads;
+					height: 10px;
+					width: 10px;
+					border: solid $outline-thickness $outline-color;
+					border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+				}
+				.p3 {
+					position: absolute;
+					top: 5px;
+					left: 20px;
+					background-color: $pads;
+					height: 10px;
+					width: 10px;
+					border: solid $outline-thickness $outline-color;
+					border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+				}
+				.p4 {
+					position: absolute;
+					top: 17px;
+					left: 30px;
+					background-color: $pads;
+					height: 10px;
+					width: 10px;
+					border: solid $outline-thickness $outline-color;
+					border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+				}
+				.p5 {
+					position: absolute;
+					top: 32px;
+					left: 31px;
+					background-color: $pads;
+					height: 10px;
+					width: 10px;
+					border: solid $outline-thickness $outline-color;
+					border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+				}
+				.p6 {
+					position: absolute;
+					top: 24px;
+					left: 11px;
+					background-color: $pads;
+					height: 30px;
+					width: 15px;
+					border: solid $outline-thickness $outline-color;
+					border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+		}
+	}
+}
