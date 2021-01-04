@@ -3,8 +3,24 @@ body, html {
   padding: 0;
   height: 100%;
   background-color: #0e0e0e;
+  font-family: Roboto, Arial, sans-serif;
 }
 
+.message {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 20px;
+  margin-left: 20px;
+  color: white;
+  font-size: 16px;
+  line-height: 1.5em;
+}
+
+.message a:visited, .message a {
+  text-decoration: underline;
+  color: #44a7c6;
+}
 .container {
   height: 100%;
   display: -ms-grid;
